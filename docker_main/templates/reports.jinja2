@@ -1,0 +1,32 @@
+{% extends "layout.jinja2" %}
+
+{% block styles %}
+  body {
+    background-color: #FFF;
+    margin: 0 auto;
+    width: 960px;
+  }
+
+  section {
+    background-color: #A8FFF4;
+    border-radius: 10px;
+    margin: 0 0 20px;
+    padding: 10px;
+  }
+{% endblock styles %}
+
+{% block content %}
+<div class="content">
+  <h1><span class="font-semi-bold">Usage Reports</span></h1>
+
+  <section>
+    Usage looks like:<br />
+    <ul>
+      <li>Maths: {{ stats.maths }}</li>
+      <li>Science: {{ stats.science }}</li>
+      <li>Total: {{ stats.total }}</li>
+    </ul>
+  </section>
+</div>
+
+{% endblock content %}

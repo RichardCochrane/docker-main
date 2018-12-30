@@ -1,0 +1,64 @@
+{% extends "layout.jinja2" %}
+
+{% block styles %}
+  body {
+    background-color: #FFF;
+    margin: 0 auto;
+    width: 960px;
+  }
+
+  section {
+    background-color: #A8FFF4;
+    border-radius: 10px;
+    margin: 0 0 20px;
+    padding: 10px;
+  }
+{% endblock styles %}
+
+{% block content %}
+<div class="content">
+  <h1><span class="font-semi-bold">Docker</span> <span class="smaller">Testing project</span></h1>
+  <p class="lead">Welcome to <span class="font-normal">Docker</span>!</p>
+
+  <section>
+    <h2>
+      To send an email, use the form below:
+    </h2>
+
+    <form action="{{ request.route_path('api.send_email') }}" method="GET">
+      <label>Email address</label>
+      <input type="text" name="email_address" />
+      <br />
+
+      <label>Subject</label>
+      <input type="text" name="subject" />
+      <br />
+
+      <label>Body</label>
+      <input type="text" name="body" />
+      <br />
+
+      <input type="submit">
+    </form>
+  </section>
+
+  <section>
+    <h2>
+      To save an instance of practice, click on a button below:
+    </h2>
+
+    <a href="{{ request.route_path('api.update_reporting', _query={'subject': 'maths'}) }}">Save Maths Exercise</a>
+    <br /><br />
+    <a href="{{ request.route_path('api.update_reporting', _query={'subject': 'science'}) }}">Save Science Exercise</a>
+  </section>
+
+  <section>
+    <h2>
+      Reporting Stats
+    </h2>
+
+    To view report statistics, click <a href="{{ request.route_path('api.reporting_stats') }}">here</a>.
+  </section>
+</div>
+
+{% endblock content %}
