@@ -8,19 +8,7 @@ with open(os.path.join(here, 'README.txt')) as f:
 with open(os.path.join(here, 'CHANGES.txt')) as f:
     CHANGES = f.read()
 
-requires = [
-    'plaster_pastedeploy',
-    'pyramid',
-    'pyramid_jinja2',
-    'pyramid_debugtoolbar',
-    'waitress',
-    'alembic',
-    'pyramid_retry',
-    'pyramid_tm',
-    'SQLAlchemy',
-    'transaction',
-    'zope.sqlalchemy',
-]
+requires = []
 
 tests_require = [
     'WebTest >= 1.3.1',  # py3 compat
