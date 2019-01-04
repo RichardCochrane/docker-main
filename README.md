@@ -12,7 +12,7 @@ This project has two components:
 2. `source venv/bin/activate`
 3. `pip install -r requirements.txt`
 4. `pip install -e .`
-5. `pserve development.ini`
+5. `MAIL_API_URL=http://0.0.0.0:5657 REPORTS_API_URL=http://0.0.0.0:5656 pserve development.ini`
 
 ## Installation (docker)
 
